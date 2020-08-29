@@ -19,13 +19,29 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 		<!-- MailChimp -->	
 		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/84260bee746efed1c4bae56c9/f5fdae168c4293946ed510378.js");</script>
-    </head>
+		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	</head>
     <body>
+	
+	
+	
+	
+	<div id="message">
+		<div style="padding: 5px;">
+			<div class="alert alert-success" id="success-alert" style="opacity:100%;">
+				<a href="#" class="close" data-dismiss="alert">&times;</a>
+				<strong>Success!</strong> Your have successfully subscribed to our newsletter.
+			</div>
+		</div>
+	</div>
+	
 	
 	<br>
 	<nav class="navbar navbar-expand-lg navbar-light" style="margin-left: 10%; margin-right: 10%;">
 	  <a class="navbar-brand" href="#">
-		<img src="images/dsclogo.webp" style="max-width: 170px;height: auto;" alt="logo">
+		<img src="images/dsclogo.webp" style="max-width: auto;height: 80px;" alt="logo">
 	  </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -53,6 +69,10 @@
 	<br><br><br><br>
 	
 	
+	
+	
+	
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12">
@@ -60,7 +80,7 @@
 					<h1>Developers Student Club<br></h1>
 					<h1 style="font-weight: 700;">University of Aberdeen</h1>
 					<p>Developer Student Clubs are university based community groups for students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome.</p>
-					<a href="https://bit.ly/3efh7Ze" class="btn btn-primary btn-lg">Join Us Today!</a>
+					<a href="#" class="btn btn-primary btn-lg">Join Us Today!</a>
 					<div class="social-icons-list" style="margin-top: 15px;">
 						<a class="btn btn-outline-secondary btn-social mx-1 rounded-circle" target="_blank" href="https://google.com">
 							<i class="fab fa-facebook-f"></i>
@@ -149,36 +169,7 @@
 	<!-- Technologies -->
 	<br><br><br><br>
 	
-	<style>
-	body{
-	  font-family: 'Nunito', sans-serif;
-	  padding: 50px;
-	}
-	.card{
-		border-radius: 4px;
-		background: #fff;
-		box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-		  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-	  padding: 40px 20px 40px 20px;
-	  height: 190px;
-	}
-
-	.card:hover{
-		 transform: scale(1.05);
-	  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-	}
-
-	.card h3{
-	  font-weight: 600;
-	}
-
-
-	@media(max-width: 990px){
-	  .card{
-		margin: 20px;
-	  }
-	} 
-	</style>
+	
 	
 	<div class="container">
 		<div style="text-align:center;">
@@ -256,19 +247,40 @@
 			<div style="display: inline-block;"><hr style="height: 0px;border: none;border-top: 10px solid #EA4335;" width="40px"></div>
 			<div style="display: inline-block;"><hr style="height: 0px;border: none;border-top: 10px solid #FBBC04;" width="40px"></div>
 			<div style="display: inline-block;"><hr style="height: 0px;border: none;border-top: 10px solid #34A853;" width="40px"></div>
-			<p>The are some of the frequently asked questions</p>
+			<p>These are some of the questions we are frequently asked</p>
 			
 			
 			
 			
 			
 			
-			<button class="btn btn-light" style="width:100%;text-align:left;" data-toggle="collapse" data-target="#demo">I am not a student at the University of Aberdeen, Can I still join the DSC?</button>
-			<div id="demo" class="collapse" style="text-align:left;padding-left:10px;">
-			Any student in the city of Aberdeen can join, there are no restriction to join the club.
+			<button class="btn btn-light panel-title" style="width:100%;text-align:left;" data-toggle="collapse" data-target="#answer1">
+			<h5 style="padding-left: 20px;">I am not a student at the University of Aberdeen, Can I still join the DSC?</h5>
+			</button>
+			<div id="answer1" class="collapse" style="text-align:left;padding-left:10px;">
+			<p id="answers">Any student in the city of Aberdeen can join, there are no restriction to join the club.</p>
 			</div> 
 			
+			<button class="btn btn-light panel-title" style="width:100%;text-align:left;" data-toggle="collapse" data-target="#answer2">
+			<h5 style="padding-left: 20px;">I am not a Computer Science student, Can I still join the DSC?</h5>
+			</button>
+			<div id="answer2" class="collapse" style="text-align:left;padding-left:10px;">
+			<p id="answers">Yes! The Developer Student Club is for students from any background and our events will try to accomodate to every level of experience.</p>
+			</div> 
 			
+			<button class="btn btn-light panel-title" style="width:100%;text-align:left;" data-toggle="collapse" data-target="#answer3">
+			<h5 style="padding-left: 20px;">What is te Solution Challenge?</h5>
+			</button>
+			<div id="answer3" class="collapse" style="text-align:left;padding-left:10px;">
+			<p id="answers">The Solution Challenge is a world wide competition organized by google where groups from DSC's all over the world develop a solution to improve their communities using Google technologies.</p>
+			</div> 
+			
+			<button class="btn btn-light panel-title" style="width:100%;text-align:left;" data-toggle="collapse" data-target="#answer4">
+			<h5 style="padding-left: 20px;">Do I have to pay a membership?</h5>
+			</button>
+			<div id="answer4" class="collapse" style="text-align:left;padding-left:10px;">
+			<p id="answers">No, we operate on a volunteer basis as one of our goals is to provide an environment where everyone can lear independent of their background.</p>
+			</div> 
 			
 			
 			
@@ -299,22 +311,86 @@
 			
 			
 			
-			<form class="newsletter-form" data-toggle="validator" _lpchecked="1">
-			<div class="form-inline d-flex justify-content-center" >
-				<input type="email" style="width:60%;height:100px" class="form-control" placeholder="Your Email Address" name="EMAIL" required="" autocomplete="on" value="">
-				<button class="btn btn-primary" style="width:15%;height:100px" type="submit">Subscribe</button>
+			
+			
+		
+			
+			
+		<form action="https://gmail.us17.list-manage.com/subscribe/post?u=84260bee746efed1c4bae56c9&amp;id=a99da736a8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<div class="form-inline d-flex justify-content-center mc-field-group" >
+				<input type="email" value="" name="EMAIL" id="mce-EMAIL" style="width:60%;height:80px" class="form-control" placeholder="Your Email Address" required="" autocomplete="on">
+				<button type="submit" class="btn btn-primary" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" style="width:15%;height:80px">Subscribe</button>
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_84260bee746efed1c4bae56c9_a99da736a8" tabindex="-1" value=""></div>
+			<div class="clear"></div>
 			</div>
 				
-				<div id="validator-newsletter" class="form-result"></div>
-			</form>
+			<div id="validator-newsletter" class="form-result"></div>
+		</form>
+		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+
+
+
+
 			
 			
 			
 			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			
+		<script>
+			$("#success-alert").hide();
+			if(getParameterByName('success') == 'true')
+			{
+				window.history.replaceState(null, null, window.location.pathname);
+				
+				$("#success-alert").fadeTo(5000, 500).slideUp(500, function(){
+					$("#success-alert").slideUp(500);
+					});   
+			}
+
+			function getParameterByName(name) 
+			{
+				name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			
+			
+			
+			
+		</script>
+			
+			
+		<!-- Footer -->
+		<br><br>
+		<div style="text-align:center;">
+			<div class="social-icons-list" style="margin-top: 15px;">
+				<a class="btn btn-outline-secondary btn-social mx-1 rounded-circle" target="_blank" href="https://google.com">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a class="btn btn-outline-secondary btn-social mx-1 rounded-circle" target="_blank" href="https://google.com">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a class="btn btn-outline-secondary btn-social mx-1 rounded-circle" target="_blank" href="https://google.com">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</div>
+			<hr>
+			<h5>Developed with <i class="fas fa-heart" style="color:#EA4335;"></i> and <i class="fas fa-code"></i> by Guilherme Manteigas</h5>
+			<h5>2020</h5>
 			
 			
 			
 		</div>
+			
+		
 		
 		
 	</div>
