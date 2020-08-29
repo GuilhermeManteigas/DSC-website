@@ -1,7 +1,20 @@
 	body{
 	  font-family: 'Nunito', sans-serif;
-	  padding: 50px;
+	  padding-top: 20px;
+	  padding-left: 50px;
+	  padding-right: 50px;
+	  padding-bottom: 50px;
 	}
+	
+	.navbar {
+		height: 80px;
+		background-color: white;
+		border: none;
+		color: white;
+		z-index: 100;
+		transition: background-color 1s ease 0s;
+	}
+	
 	.card{
 		border-radius: 4px;
 		background: #fff;
@@ -19,7 +32,58 @@
 	.card h3{
 		font-weight: 600;
 	}
+	
+	.events{
+		border-radius: 4px;
+		background: #fff;
+		box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+			transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+		padding: 5px 5px 5px 5px;
+		height: 400px;
+		cursor: pointer;
+		text-align: center;
+	}
 
+	.events:hover{
+		transform: scale(1.05);
+		box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+	}
+
+	.events h5{
+		font-weight: 600;
+	}
+	
+	.team{
+		border-radius: 4px;
+		background: #fff;
+		box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+			transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+		padding: 20px 20px 20px 20px;
+		height: 460px;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.team:hover{
+		transform: scale(1.05);
+		box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+	}
+
+	.team h5{
+		font-weight: 600;
+	}
+	
+	.teamphoto{
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4285f4+0,4285f4+24,ea4335+25,ea4335+50,fbbc04+51,fbbc04+74,34a853+75,34a853+100 */
+		padding: 1rem;
+		background: rgb(66,133,244);
+		background: -moz-linear-gradient(-45deg,  rgb(66,133,244) 0%, rgb(66,133,244) 24%, rgb(234,67,53) 25%, rgb(234,67,53) 50%, rgb(251,188,4) 51%, rgb(251,188,4) 74%, rgb(52,168,83) 75%, rgb(52,168,83) 100%);
+		background: -webkit-linear-gradient(-45deg,  rgb(66,133,244) 0%,rgb(66,133,244) 24%,rgb(234,67,53) 25%,rgb(234,67,53) 50%,rgb(251,188,4) 51%,rgb(251,188,4) 74%,rgb(52,168,83) 75%,rgb(52,168,83) 100%);
+		background: linear-gradient(135deg,  rgb(66,133,244) 0%,rgb(66,133,244) 24%,rgb(234,67,53) 25%,rgb(234,67,53) 50%,rgb(251,188,4) 51%,rgb(251,188,4) 74%,rgb(52,168,83) 75%,rgb(52,168,83) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4285f4', endColorstr='#34a853',GradientType=1 );
+		padding: 6px;
+		width: 100%;
+	}
 
 	@media(max-width: 990px){
 		.card{
