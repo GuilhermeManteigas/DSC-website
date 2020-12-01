@@ -10,24 +10,20 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+build:
+runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - uses: actions/github-script@v3
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            var fs = require("fs");
-            console.log("Going to write into existing file");
-            // Open a new file with name input.txt and write Simply Easy Learning! to it.
-            fs.writeFile('videos.json', 'Simply Easy Learning!', function(err) {
-               if (err) {
-                  return console.error(err);
-               }
-               console.log("Data written successfully!");
-               console.log("Let's read newly written data");
-            });
+ steps:
+   - name: checkout repo content
+     uses: actions/checkout@v2 # checkout the repository content to github runner.
+   - name: setup python
+     uses: actions/setup-python@v2
+     with:
+       python-version: 3.8 #install the python needed
+   - name: execute py script # run the run.py to get the latest data
+     run: |
+       python run.py
+     env:
+       key: ${{ secrets.key }} # if run.py requires passwords..etc, set it as secrets
+   - name: export index
+     .... # use crosponding script or actions to help export.
