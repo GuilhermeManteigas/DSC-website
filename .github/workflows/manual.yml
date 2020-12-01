@@ -24,5 +24,6 @@ jobs:
          with:
            python-version: 3.8 #install the python needed
        - name: execute py script # run the run.py to get the latest data
+         working-directory: ./data
          run: |
            python run.py
