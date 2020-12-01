@@ -36,10 +36,10 @@
 		  <li class="nav-item">
 			<a class="nav-link" href="index.html">Home</a>
 		  </li>
-		  <li class="nav-item active">
+		  <li class="nav-item">
 			<a class="nav-link" href="events.html">Events</a>
 		  </li>
-		  <li class="nav-item">
+		  <li class="nav-item active">
 			<a class="nav-link" href="videos.html">Videos</a>
 		  </li>
 		  <li class="nav-item">
@@ -60,14 +60,13 @@
 	
 	<div class="container">
 		<div style="text-align:center;">
-			<h2>Our Events</h2>
+			<h2>Videos from our previous events</h2>
 			<hr class="hrgblue">&nbsp;<hr class="hrgred">&nbsp;<hr class="hrgyellow">&nbsp;<hr class="hrggreen">
-			<p>Everyone is welcomed at our events, but please register for them.</p>
 		</div>
 		<div id="loading" style="color: Tomato;">
 			<center><i class="fas fa-spinner fa-pulse fa-3x"></i></center>
 		</div>
-		<div class="row" id="events">
+		<div class="row" id="videos">
 		
 		</div>
 		<br>
@@ -167,52 +166,16 @@
 	
 	
 	<script>
-	$.getJSON('https://graph.facebook.com/629732060983637/events?fields=id,name,description,start_time,cover&access_token=EAAGQwBPLbFMBACeZAT5j0ZArkLENhADw6GR5gbcXEa1JpP9CtA0by5xjPZCD9OmeEE4VLxebuiL3nchLlXisRZCjXC8SlK5o8MKbgFyUj36ea34So2ZAHtK2Ic9aXC3UGlKomRLgU5eglm9BxwyDkkvDYSggdG5I9dwIm601ZBu7bnDk7FLoefvORNI0HdZBJgZD', function(data) {
-		// JSON result in `data` variable
-			for(var i = 0; i < data.data.length; i++) {
-				var e = data.data[i];
-				var time = getDate(e.start_time);
-				//var time = getDate(new Date(Date.parse(e.start_time)));
-				var url = "https:\/\/www.facebook.com\/events\/" + e.id + "'";
-				
-				var txt = document.getElementById("events").innerHTML + "<div class='col-md-6'><div class='events ";
-				if(Date.parse(new Date(e.start_time))-Date.parse(new Date())<0){txt += "old"}
-				txt += "' onclick='openurl(" + e.id + ")'>";
-				txt += "<img class='eventsimg' src='";
-				if (typeof e.cover != "undefined"){
-					txt += e.cover.source
-				}else{
-					txt += "img/AUCSLogo.png"
-				}
-				txt += "' alt='image'>"+
-				"<h5>" + e.name + "</h5>"+
-				"<p>" + e.description + "</p>"+
-				"<div class='card-footer text-muted'>" + time + "</div>"+
-				"</div>"+
-				"</div>";
-				
-
-				
-				document.getElementById("events").innerHTML = txt;
+	$.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUirrYErHzS2TR20MRAK6BWg&key=AIzaSyAzIUs0f4Mm1tqXOxc6EXIUnZLi2Nfgyns', function(data) {
+			for(var i = 0; i < data.items.length; i++) {
+				var v = data.items[i];
+				var txt = document.getElementById("videos").innerHTML;
+				txt += "<div class='col-md-6'><iframe width='560' height='315' src='https://www.youtube.com/embed/" + v.snippet.resourceId.videoId + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>";
+				document.getElementById("videos").innerHTML = txt;
 			}
-			
 			var l = document.getElementById("loading");
 			l.style.display = "none";
-			
 	});
-
-	function getDate(date){
-		var d = new Date(date);
-		var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		var txt = "" + days[d.getDay()] + ", " + d.getDate() + " " + months[d.getMonth()] + "" + d.getFullYear() + " at " + d.getHours() + ":" + ((d.getMinutes()<10?'0':'') + d.getMinutes());
-		return txt;
-	}
-
-	function openurl(id){
-		var url = "https://www.facebook.com/events/" + id;
-		window.open(url,'eventpage');
-	}
 	</script>
 	
 	
