@@ -23,7 +23,3 @@ runs-on: ubuntu-latest
    - name: execute py script # run the run.py to get the latest data
      run: |
        python run.py
-     env:
-       key: ${{ secrets.key }} # if run.py requires passwords..etc, set it as secrets
-   - name: export index
-     .... # use crosponding script or actions to help export.
