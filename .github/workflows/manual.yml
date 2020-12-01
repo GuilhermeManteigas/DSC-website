@@ -17,20 +17,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
       - uses: actions/github-script@v3
         with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const script = require(`${process.env.GITHUB_WORKSPACE}/data/getData.js`)
-            console.log(script({github, context}))
-
-      # Runs a single command using the runners shell
-      #- name: Run a one-line script
-      #  run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script
-       # run: |
-        #  echo Add other actions to build,
-         # echo test, and deploy your project.
+            var fs = require("fs");
+            console.log("Going to write into existing file");
+            // Open a new file with name input.txt and write Simply Easy Learning! to it.
+            fs.writeFile('videos.json', 'Simply Easy Learning!', function(err) {
+               if (err) {
+                  return console.error(err);
+               }
+               console.log("Data written successfully!");
+               console.log("Let's read newly written data");
+            });
