@@ -6,7 +6,7 @@ with urllib.request.urlopen("https://www.googleapis.com/youtube/v3/playlistItems
 	
 #solditems = requests.get('https://github.com/timeline.json') # (your url)
 #data = solditems.json()
-with open('videos.json', 'w') as f:
+with open('videos.json', 'w+') as f:
     json.dump(data, f)
 	
 	
