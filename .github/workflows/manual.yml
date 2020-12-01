@@ -17,12 +17,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        - name: Fetch Data to File
-           uses: gautemo/fetch-api-data-action@1.1.0
-           with:
-              url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUirrYErHzS2TR20MRAK6BWg&key=AIzaSyAzIUs0f4Mm1tqXOxc6EXIUnZLi2Nfgyns'
-              file: 'data/videos.json'
-
+       - name: Fetch Data to File
+         uses: gautemo/fetch-api-data-action@1.1.0
+         with:
+            url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUirrYErHzS2TR20MRAK6BWg&key=AIzaSyAzIUs0f4Mm1tqXOxc6EXIUnZLi2Nfgyns'
+            file: 'data/videos.json'
        #- name: checkout repo content
         # uses: actions/checkout@v2 # checkout the repository content to github runner.
        #- name: setup python
