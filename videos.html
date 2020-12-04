@@ -162,11 +162,9 @@
 		
 		
 	</div>
-
-	
 	
 	<script>
-	$.getJSON('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUirrYErHzS2TR20MRAK6BWg&key=AIzaSyAzIUs0f4Mm1tqXOxc6EXIUnZLi2Nfgyns', function(data) {
+	$.getJSON('https://dscuoa.ml/data/videos.json', function(data) {
 			for(var i = 0; i < data.items.length; i++) {
 				var v = data.items[i];
 				var txt = document.getElementById("videos").innerHTML;
