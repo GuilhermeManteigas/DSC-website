@@ -7,3 +7,7 @@ with urllib.request.urlopen("https://www.googleapis.com/youtube/v3/playlistItems
 
 #with open('videos.json', 'w+') as f:
 #    f.write(data)
+
+f = open("videos.json", "w+")
+f.write(data)
+f.close()
