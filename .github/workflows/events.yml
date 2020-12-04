@@ -5,7 +5,9 @@ name: Manual workflow
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  schedule:
+  - cron: "*/30 * * * *"
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
