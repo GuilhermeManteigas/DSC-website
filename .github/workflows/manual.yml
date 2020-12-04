@@ -27,4 +27,3 @@ jobs:
          working-directory: ./data
          run: |
          python run.py
-       
