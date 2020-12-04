@@ -5,5 +5,5 @@ with urllib.request.urlopen("https://www.googleapis.com/youtube/v3/playlistItems
 	data = json.loads(url.read().decode())
 	print(data)
 
-with open('videos.json', 'w+') as f:
-    f.write(data)
+#with open('videos.json', 'w+') as f:
+#    f.write(data)
