@@ -26,4 +26,4 @@ jobs:
        - name: execute py script # run the run.py to get the latest data
          working-directory: ./data
          run: |
-         python run.py
+           python run.py
