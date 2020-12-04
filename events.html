@@ -168,7 +168,6 @@
 	
 	<script>
 	$.getJSON('https://dscuoa.ml/data/events.json', function(data) {
-		// JSON result in `data` variable
 			for(var i = 0; i < data.data.length; i++) {
 				var e = data.data[i];
 				var time = getDate(e.start_time);
