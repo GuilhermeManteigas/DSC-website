@@ -27,6 +27,7 @@ jobs:
          working-directory: ./data
          run: |
            python run.py
+           python updateEvents.py
        - name: Commit files
          id: commit
          run: |
