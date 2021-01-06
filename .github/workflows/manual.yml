@@ -28,6 +28,10 @@ jobs:
          run: |
            python run.py
            python updateEvents.py
+       - name: execute py script 2 # run the run.py to get the latest data
+         working-directory: ./data
+         run: |
+           python updateEvents.py
        - name: Commit files
          id: commit
          run: |
