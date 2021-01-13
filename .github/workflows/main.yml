@@ -6,7 +6,7 @@ name: CI
 # or API.
 on:
   schedule:
-  - cron: "*/30 * * * *"
+  - cron: "*/60 */24 * * *"
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
